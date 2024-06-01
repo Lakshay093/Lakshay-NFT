@@ -1,0 +1,33 @@
+const NFTs = []
+
+function mintNFT(_name, _eyecolor, _shirttype, _bling){
+    const NFT = {
+        "name": _name,
+        "eyecolor": _eyecolor,
+        "shirttype": _shirttype,
+        "bling": _bling 
+    }
+    NFTs.push(NFT);
+    console.log("Minted: "+ _name);
+}
+
+function listNFTs(){
+    for(let i  = 0; i< NFTs.length; i++){
+        console.log("\nID: " + (i + 1));
+        console.log("Name: " + NFTs[i].name);
+        console.log("Eyecolor: " + NFTs[i].eyecolor);
+        console.log("ShirtType: " + NFTs[i].shirttype);
+        console.log("Bling: " + NFTs[i].bling);
+    }
+}
+
+function gettotalsupply(){
+    console.log("\n" + NFTs.length);
+}
+mintNFT("Lakshay", "Brown", "shirt", "gold chain");
+mintNFT("Sujal", "Hazel", "t-shirt", "cap");
+mintNFT("Vaibhav", "Blue", "hoodie", "necklace");
+
+listNFTs();
+
+gettotalsupply();
